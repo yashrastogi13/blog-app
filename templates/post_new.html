@@ -1,0 +1,9 @@
+<!-- template/post_new.html --> 
+{% extends 'base.html' %}
+{% block content %}
+<h1>new post</h1>
+<form action="" method="post">{% csrf_token %}   <!--adding csrf token for preventing cross site scripting -->
+    {{ form.as_p }}              <!--from as paragraph (render the form as paragraph)  -->
+    <input type = "Submit" value = "save"/>
+</form>
+{% endblock content %}
